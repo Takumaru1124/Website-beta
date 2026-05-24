@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ - たくまる 公式ブログサイト</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a6cf7;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #4a6cf7;
+        }
+        
+        .hero {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            color: white;
+            margin-top: 70px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 2rem 100px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+            color: #222;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 1.8rem;
+        }
+        
+        .blog-date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .blog-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            color: #555;
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .read-more {
+            color: #4a6cf7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav>
+            <div class="logo">たくまる</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="../blog.html">Blog</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- トップ -->
+    <section class="hero" style="background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4)), 
+    url('../../hero.jpg') center/cover no-repeat;">
+        <div>
+            <h1>ブログを開設！<br>なぜXから移動しようと思ったのかなどすべて話す</h1>
+        </div>
+    </section>
+    <br><br>
+    <p>私たくまる、ブログ開設しました🎉<br>
+       でも、みなさんはこう思うはず<br>
+       「なぜいきなりブログを開設したの？」<br>
+       そこでこの初記事では<br>
+       「 私がなぜブログを開設したのか」「なぜXを辞めるのか」「今後SNSはするのか」<br>
+       この3つについて書こうと思います。
+    </p>
+    <br>
+    <h2>1, このサイト普通に作る名が大変だった
+    </h2>
+    <p>
+       謎に「阿部寛級の速度で作らないと！」と思い、このサイト実はHTMLとJPEG画像だけで構成されていてデザイン系をHTMLに入れる作業が大変でした。<br>
+       この記事部分が余白なしの理由はデザインで疲れ果ててこの部分を作成するのが面倒だったからです。<br>
+       そこはご了承くださいね
+    </p>
+    <br>
+    <h2>2, なぜブログを開設したのか？
+    </h2>
+    <p>結論から言うと、「完全に孤立した自分の空間」が欲しかったからです<br>
+       大抵の人は「？」ですよね<br>
+       SNSは大量のユーザーからの投稿が出てくる<br>
+       でもここなら私が運営するブログです<br>
+       自分の好きなように言える<br>
+       この自由な空間が欲しかった<br>
+       あとはこっちの方が投稿自体は簡単だからです
+    </p>
+    <br>
+    <h2>3, なぜXを辞めるのか？
+    </h2>
+    <p>理由は話せません。理由がリアルの話で名前を使わないと理解が難しくなってしまい、記事に書くことは断念しました。<br>
+       しかし、そのうち新垢を作って復活しようと思っているので待っていてください。
+    </p>
+    <br>
+    <h2>4, 今後SNSをするのか？
+    </h2>
+    <p>結論としてはします<br>
+       ブログを書いている2026/05/11 01:11現在フォロワーは166人<br>
+       200人の夢には届きませんでした<br>
+       新しくアカウント作ったときは1000フォロワー行ってみようと思います
+    </p>
+    <br>
+    <h2>5, まとめ
+    </h2>
+    <p>私が用意したブログのテンプレート上まとめを書かないといけないので書きます！<br>
+       今後また新しいアカウントでSNS活動します<br>
+       このブログも活用ます（？）</p>
+    <br><br>
+    <footer>
+        <p>&copy; 2026 YourName. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
